@@ -4,6 +4,10 @@ Myapp::Application.routes.draw do
 
   match "auth/:provider/callback" => "session#callback"
   
+  match 'session/logout' => "session#logout", :as => 'logout' 
+  
+  match 'account' => 'profile#index', :as => 'profile'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

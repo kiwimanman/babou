@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
 */
+
+.tiny_fb_image {
+  height: 20px;
+  width: 20px;
+}

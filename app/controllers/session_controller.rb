@@ -1,6 +1,5 @@
 class SessionController < ApplicationController
   def callback
-    debugger
     if response = env["omniauth.auth"]
       user = FacebookUser.find_by_facebook_id(env["omniauth.auth"].uid)
       if user.nil?
@@ -27,6 +26,11 @@ class SessionController < ApplicationController
     else
       flash[:notice] = 'Logged in unsuccessfully with facebook'
     end
+    redirect_to root_path
+  end
+  
+  def logout
+    session.delete :uid
     redirect_to root_path
   end
 end
