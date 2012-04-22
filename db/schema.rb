@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321021830) do
+ActiveRecord::Schema.define(:version => 20120422023839) do
+
+  create_table "facebook_users", :force => true do |t|
+    t.string   "facebook_id"
+    t.string   "credentials"
+    t.string   "email"
+    t.string   "nickname"
+    t.string   "given_name"
+    t.string   "family_name"
+    t.string   "location"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "units", :force => true do |t|
     t.string   "name"

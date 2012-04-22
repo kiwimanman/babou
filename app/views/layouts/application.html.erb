@@ -31,11 +31,20 @@
         </a>
         <a class="brand" href="#">Kiwimanman</a>
         <div class="nav-collapse">
-          <ul class="nav">
+          <ul class="nav pull-left">
             <li><%= link_to "Browse Units", units_path %></li>
             <li><%= link_to "Price List" %></li>
             <li><%= link_to "Contact Us" %></li>
             <li><%= link_to "Cart" %></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li>
+              <% if logged_in? %>
+                <%= link_to 'Profile' %>
+              <% else %>
+                <%= link_to "Log In", '/auth/facebook'%>
+              <% end %>
+            </li>
           </ul>
         </div>
       </div>
