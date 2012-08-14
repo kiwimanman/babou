@@ -24,7 +24,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
   gem 'twitter-bootstrap-rails'
-	gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
@@ -45,4 +45,4 @@ gem 'koala'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug', :groups => [:development, :test]
+# gem 'ruby-debug19', :require => 'ruby-debug', :groups => [:development, :test]
